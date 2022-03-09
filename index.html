@@ -46,18 +46,18 @@
 	<div id="gameContainer">
 
 		<canvas id="unity-canvas" data-pixel-art=""></canvas>
-		<script src="Build/VKBT.loader.js"></script>
+		<script src="Build/1605BlockTower.loader.js"></script>
 
 		<script>
 			var canvas = document.querySelector("#unity-canvas");
 			var config = {
-				dataUrl: "Build/VKBT.data.unityweb",
-				frameworkUrl: "Build/VKBT.framework.js.unityweb",
-				codeUrl: "Build/VKBT.wasm.unityweb",
+				dataUrl: "Build/1605BlockTower.data.unityweb",
+				frameworkUrl: "Build/1605BlockTower.framework.js.unityweb",
+				codeUrl: "Build/1605BlockTower.wasm.unityweb",
 				streamingAssetsUrl: "StreamingAssets",
 				companyName: "APgames",
 				productName: "Block Tower",
-				productVersion: "1.0.6.0",
+				productVersion: "1.0.6.5",
 			};
 			var scaleToFit;
             var unityI = null;
@@ -80,7 +80,7 @@
 					w = window.innerWidth;
 					h = window.innerHeight;
 
-					var r = 800 / 630;
+					var r = 880 / 630;
 
 					if (w * r > window.innerHeight) {
 						w = Math.min(w, Math.ceil(h / r));
@@ -88,7 +88,7 @@
 					h = Math.floor(w * r);
 				} else {
 					w = 630;
-					h = 800;
+					h = 880;
 				}
 
 				container.style.width = canvas.style.width = w + "px";
