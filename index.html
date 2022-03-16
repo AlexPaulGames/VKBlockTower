@@ -9,7 +9,7 @@
 	<style>
 		html,
 		body {
-			background: #000;
+			background: #a3e2ff;
 			width: 100%;
 			height: 100%;
 			overflow: visible;
@@ -143,6 +143,31 @@
           console.log(data);
           unityI.SendMessage('VKSDK', 'RewardGetting');})
       }
+
+	  function joinGroup(){
+		  vkBridge.send("VKWebAppJoinGroup", {"group_id": 211143508});
+	  }
+
+	  function postWall(){
+		  vkBridge.send("VKWebAppShowWallPostBox", {
+		"message": "�������� ����, ����� ��������� �����!",
+		"attachments": "https://vk.com/app8096716_205468985"
+		});
+	  }
+
+	  function shareLink(){
+		  vkBridge.send("VKWebAppShare", {"link": "vk.com/app8096716_205468985"});
+	  }
+
+	  function addToFavorites(){
+		  vkBridge.send("VKWebAppAddToFavorites");
+	  }
+
+	  function inviteFriends(){
+		  vkBridge.send("VKWebAppShowInviteBox", {})
+         .then(data => console.log(data.success))  
+        .catch(error => console.log(error));
+	  }
     </script>
 
 </body>
